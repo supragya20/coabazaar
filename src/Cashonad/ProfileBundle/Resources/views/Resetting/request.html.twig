@@ -1,0 +1,32 @@
+{% extends 'CashonadProfileBundle::layout.html.twig' %}
+
+{% block title %}login{% endblock%}
+{% block body %}
+<div class="logintitle">
+    Reset Password
+</div>
+<div class="signinblock">
+    <form action="{{ path("email") }}" method="post">
+        <span>
+            <div>
+                <input type="text" name="_email" placeholder="type your email" required="required"  />
+                    {% if invalid_email is defined %}
+                <span class="help-inline">Supplied email address does not exist.</span>
+                <div class="clearfix"></div>
+                    {% endif %}
+            </div>
+        </span>
+        <button type="submit" class="sf-button">
+            <span class="border-l">
+                <span class="border-r">
+                    <span class="btn-bg">Submit</span>
+                </span>
+            </span>
+        </button>
+        </br>
+    </form>
+</div>
+{% endblock %}
+
+
+

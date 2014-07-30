@@ -1,0 +1,18 @@
+{# src/Cashonad/BlogBundle/Resources/views/Product/add.html.twig #}
+{% extends 'CashonadMainBundle::layout.html.twig' %}
+
+{% block title %}add{% endblock%}
+
+{% block body %}
+<header>
+    <h2>Add Product</h2>
+</header>
+
+<form action="{{ path('add') }}" method="post"  class="blogger" {{ form_enctype(form) }}>
+        {{ form_errors(form) }}
+        {{ form_row(form.ProductName) }}
+        {{ form_row(form.ProductType) }}
+        {{ form_rest(form) }}
+    <input type="submit" value="Submit" />
+</form>
+{% endblock %}

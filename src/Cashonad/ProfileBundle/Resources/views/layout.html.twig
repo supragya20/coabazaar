@@ -1,0 +1,8 @@
+{# src/Cashonad/ProfileBundle/Resources/views/layout.html.twig #}
+{% extends '::profile.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('bundles/cashonadmain/css/login.css') }}" type="text/css" rel="stylesheet" />
+{% endblock %}
+

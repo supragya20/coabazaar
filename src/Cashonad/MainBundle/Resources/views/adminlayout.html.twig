@@ -1,0 +1,11 @@
+{# src/Cashonad/MainBundle/Resources/views/layout.html.twig #}
+{% extends '::adminbase.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+<link href="{{ asset('bundles/cashonadmain/css/blog.css') }}" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+{% block sidebar %}
+Sidebar content
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'CashonadProfileBundle::layout.html.twig' %}
+
+{% block title %}login{% endblock%}
+
+{% block body %}
+<div class="logintitle">
+    Admin Login
+</div>
+<div class="signinblock">
+
+    {% if error %}
+    <div class="error">{{ error.message }}</div>
+    {% endif %}
+    <form action="{{ path('login_check') }}" method="post">
+        <div>
+            <input type="text" id="username" name="_username" placeholder="Username" value="{{ last_username }}"required="required" />
+        </div>
+        <br>
+        <div>
+            <input type="password" id="password" placeholder="password" name="_password" required="required" />
+        </div>
+        <button type="submit" class="sf-button">
+            <span class="border-l">
+                <span class="border-r">
+                    <span class="btn-bg">Login</span>
+                </span>
+            </span>
+        </button>
+        </br>
+        <div class="fogotpass">
+            <a href="{{ path('request') }}">Forgot Password ?</a>
+        </div>
+    </form>
+</div>
+{% endblock %}
+
+
+

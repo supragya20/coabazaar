@@ -1,0 +1,18 @@
+{# src/Cashonad/MainBundle/Resources/views/Page/index.html.twig #}
+{% extends 'CashonadMainBundle::layout.html.twig' %}
+
+{% block body %}
+<article class="blog">
+    <div class="snippet">
+        <header>
+            <img src="{{ asset('bundles/cashonadmain/images/inspiration.jpg' ) }}" alt=" image not found" class="large" />
+            <h2>{{ product.ProductName }}</a></h2>
+        </header>
+        <p>{{ product.ProductType }}</p>
+    </div>
+    <footer class="meta">
+        <p>Conmments: -</p>
+        <p>Tags: <span class="highlight">{{ product.id }}</span></p>
+    </footer>
+</article>
+{% endblock %}

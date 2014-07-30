@@ -1,0 +1,29 @@
+{# src/Cashonad/MainBundle/Resources/views/Page/index.html.twig #}
+{% extends 'CashonadMainBundle::layout.html.twig' %}
+
+{% block body %}
+        {% for product in products %}
+<hgroup>
+    <div class="snippet">
+        <header>
+            <h2><a href="{{ path('show', { 'id': product.id }) }}">{{ product.ProductName }}</a></h2>
+        </header>
+        <p>{{ product.ProductType }}</p>
+    </div>
+
+    <footer class="meta">
+
+        <img src="{{ asset('bundles/cashonadmain/images/inspiration.jpg' ) }}" alt=" image not found" class="large" />
+        <h3><b>Comments:</b></h3>
+        <span class="label"></span>
+        <p style="text-indent: 6em;">
+            Cool product i like it.........
+        </p>
+        <p>Tags: <span class="highlight">{{ product.id }}</span></p>
+    </footer>
+</hgroup>
+    {% else %}
+<p>There are no product entries for coabazaar</p>
+    {% endfor %}
+{% endblock %}
+

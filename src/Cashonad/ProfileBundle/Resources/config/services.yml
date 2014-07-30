@@ -1,0 +1,7 @@
+parameters:
+#    cashonad_profile.example.class: Cashonad\ProfileBundle\Example
+
+services:
+#    cashonad_profile.example:
+#        class: %cashonad_profile.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

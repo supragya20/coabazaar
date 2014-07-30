@@ -1,0 +1,49 @@
+cashonad_main_homepage:
+    pattern:  /
+    defaults: { _controller: CashonadMainBundle:Main:index }
+    requirements:
+        _method:  GET
+
+index:
+    pattern:  /index
+    defaults: { _controller: CashonadMainBundle:Main:index }
+    requirements:
+
+contact:
+    pattern:  /contact
+    defaults: { _controller: CashonadMainBundle:Main:contact }
+    requirements:
+        _method:  GET|POST
+
+show:
+    pattern:  /show/{id}
+    defaults: { _controller: CashonadMainBundle:Main:show }
+    requirements:
+        _method:  GET
+        id: \d+
+
+edit:
+    pattern:  /edit/{id}
+    defaults: { _controller: CashonadMainBundle:Main:edit }
+    requirements:
+        id:  \d+
+
+add:
+    pattern:  /add
+    defaults: { _controller: CashonadMainBundle:Main:add}
+    requirements:
+
+request:
+    pattern:  /request
+    defaults: { _controller: CashonadProfileBundle:Resetting:request}
+    requirements:
+
+email:
+    pattern:  /email
+    defaults: { _controller: CashonadProfileBundle:Resetting:email}
+    requirements:
+
+
+
+
+

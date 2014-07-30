@@ -1,0 +1,23 @@
+{% extends 'CashonadMainBundle::layout.html.twig' %}
+
+{% block title %}Contact{% endblock%}
+
+{% block body %}
+<header>
+    <h1>Contact coabazaar</h1>
+</header>
+
+<p>Want to contact coabazaar?</p>
+
+<form action="{{ path('contact') }}" method="post"  class="blogger">
+
+
+        {{ form_row(form.email) }}
+        {{ form_widget(form.email) }}
+        {{ form_row(form.body) }}
+        {{ form_widget(form.body) }}
+
+    <input type="submit" value="Submit" />
+</form>
+{% endblock %}
+
